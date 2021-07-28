@@ -13,7 +13,7 @@ export default async function announceInDiscord(message, author) {
         process.env["CSEDU_ICON_URL"],
         process.env["FACEBOOK_GROUP_URL"]
       )
-      .addField("**Notice**", message, true)
+      .addField("**"+author+"**", message, true)
       .setTimestamp()
       .setFooter("Message sent timing: ", process.env["CSEDU_ICON_URL"]);
     webhook.send(messageEmbed);
