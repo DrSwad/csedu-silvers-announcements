@@ -3,6 +3,6 @@
 import announceInDiscord from "../../helpers/discord"
 
 export default function handler(req, res) {
-  announceInDiscord('New discord announcement')
+  announceInDiscord('New discord announcement', 'John Doe')
   res.status(200).send('Request received')
 }
