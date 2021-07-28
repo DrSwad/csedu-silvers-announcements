@@ -4,7 +4,7 @@ const webhook = new Discord.WebhookClient(
   process.env["DISCORD_CLIENT_TOKEN"]
 );
 
-export default async function announceInDiscord(message) {
+export default async function announceInDiscord(message, author) {
   try {
     const messageEmbed = new Discord.MessageEmbed()
       .setColor("#0099ff")
